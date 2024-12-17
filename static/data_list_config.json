@@ -1,0 +1,551 @@
+[
+    {
+        "id": "_-DsSsbMa9k_000032_000042_clip_1",
+        "domain": "Kinetics700",
+        "text_description": "A man is standing in a room and talking on the phone.",
+        "header": "Talking on the phone",
+        "raw_video": "https://drive.google.com/file/d/10dgfxR34QpRrW43iZ_AsCNGC15nRDmoO/preview",
+        "smpl_video": "https://drive.google.com/file/d/1NNn4rKePASqGj-_u_2feY86Iq1VolSNQ/preview",
+        "keypoints": "https://drive.google.com/file/d/1bsXFop6ej-hWxCH5Wi3WZc2n6qImn3Gj/preview",
+        "actions": "https://drive.google.com/file/d/1_wmkoZwL9_HXXv4YiSS2DZ1EDN0CdCMM/preview" 
+    },
+
+    {
+        "id": "_0m_YMpQayA_000168_000178_clip_1",
+        "domain": "Kinetics700",
+        "text_description": "A man is playing tennis on a court, hitting the ball with his racket.",
+        "header": "Playing tennis",
+        "raw_video": "https://drive.google.com/file/d/1mDOcKopb9VwQXoNMKIJx8dVmFg7tSLfh/preview",
+        "smpl_video": "https://drive.google.com/file/d/1uxLba_nh2pjHq7BKTFJkeoBbIc7jmEDo/preview",
+        "keypoints": "https://drive.google.com/file/d/1-08aHZFQylbFCXD1aB1EX5zxReNCkd5f/preview",
+        "actions": "https://drive.google.com/file/d/1yhHnZIhLS_oB2L8qYooKcFDvkaDun3ex/preview" 
+    },
+
+    {
+        "id": "_0S9ByTZPL4_000003_000013_clip_1",
+        "domain": "Kinetics700",
+        "text_description": "A man is riding a scooter on the sidewalk near the water.",
+        "header": "Riding a scooter",
+        "raw_video": "https://drive.google.com/file/d/11wmCojxEoe566Pyo2Alrdt0AbBKcDJAt/preview",
+        "smpl_video": "https://drive.google.com/file/d/1kf4Ers6e3pD0WU7m7IfBcTaNtY8rTwX8/preview",
+        "keypoints": "https://drive.google.com/file/d/1bA1wQ7u37SF2AVFptcWqwJlFHiK8DUKy/preview",
+        "actions": "https://drive.google.com/file/d/18Ml5SesN0eTCCslMAVeTHkjnb8tiX37k/preview" 
+    },
+
+    {
+        "id": "_1WeIYv9q3Y_000006_000016_clip_11",
+        "domain": "Kinetics700",
+        "text_description": "A man is riding an unicycle in front of a small building, interacting with a bicycle and a motorcycle.",
+        "header": "Riding a unicycle",
+        "raw_video": "https://drive.google.com/file/d/1EZSN3NJ2NT9rtg2gxmmaCDPYSM-7a00e/preview",
+        "smpl_video": "https://drive.google.com/file/d/18vTwKTFO-nQyp1zb8hkTQd3j6vbzFJb-/preview",
+        "keypoints": "https://drive.google.com/file/d/1QyWEzCqlOgKLq74PbUO6aAqRigwJ9eRf/preview",
+        "actions": "https://drive.google.com/file/d/1ekTU4Fb1GrpC4a67EXGmxzChl7rPexnX/preview" 
+    },
+
+    {
+        "id": "1H6PS_clip_1",
+        "domain": "Charades",
+        "text_description": "A man is standing in a kitchen, holding a cup of coffee and looking at himself in the mirror.",
+        "header": "Holding a cup of coffee",
+        "raw_video": "https://drive.google.com/file/d/1RRMA63gZOfhCj8C3syZrL5ImXhtlUOJX/preview",
+        "smpl_video": "https://drive.google.com/file/d/1RpjFCrRVXQ5Zje08PaJUdvOBrUKurczi/preview",
+        "keypoints": "https://drive.google.com/file/d/10TaixvU_VOyIbbYV5e35ZCybgX3jAUa9/preview",
+        "actions": "https://drive.google.com/file/d/1fGOEcH-3jE-gvlS73jogUWGX21LIJlFB/preview" 
+    },
+
+    {
+        "id": "2_feet_zig_zag_and_back_jump_roping_clip_5",
+        "domain": "Online Videos",
+        "text_description": "The human is jumping up and down in the air.",
+        "header": "Jumping up and down",
+        "raw_video": "https://drive.google.com/file/d/1r6TEsQD8mtT4hGSx1uRDWRQd6-h0jQwq/preview",
+        "smpl_video": "https://drive.google.com/file/d/1wPQbbJfmgJNDpcLTiEe7LzTgp-utPXZt/preview",
+        "keypoints": "https://drive.google.com/file/d/1qd0MhG5t-lrFz9T7lfRbXxW4w0g1NuRF/preview",
+        "actions": "https://drive.google.com/file/d/16R4RTr1GNHdvFy61004EZYDExdZdtnim/preview" 
+    },
+
+    {
+        "id": "2WW04_clip_1",
+        "domain": "Charades",
+        "text_description": "In the video, a woman is seen standing in a room, holding a chair and looking around.",
+        "header": "Holding a chair",
+        "raw_video": "https://drive.google.com/file/d/1z9iaFHcVymiOCC0hnjHjrI6ZNT4AZ439/preview",
+        "smpl_video": "https://drive.google.com/file/d/1LYEbZxX-JGg2g3tK-sojTvdMnTpVsWW0/preview",
+        "keypoints": "https://drive.google.com/file/d/1zsFfctmmpa58_gFN3yRyNT4YlrQtolSd/preview",
+        "actions": "https://drive.google.com/file/d/1OUXEqXIaBbPJH3kH0oQ0-Bex-0GQh1S3/preview" 
+    },
+
+    {
+        "id": "5_minute_morning_stretch_amp_mobility_routine_iron_out_the_kinks_amp_feel_amazing_clip_3",
+        "domain": "Online Videos",
+        "text_description": "The human is doing yoga in the living room, standing on a wooden floor and stretching his arms and legs.",
+        "header": "Stretching arms and legs",
+        "raw_video": "https://drive.google.com/file/d/1OIIicYBHNWOTjk45Jycc12wOulc-5-zj/preview",
+        "smpl_video": "https://drive.google.com/file/d/1-09eFJcdCv2UPbKnsgoDMotGMf7bOTyB/preview",
+        "keypoints": "https://drive.google.com/file/d/1u6guqW-hzb-liuG6EPZ2j7ZbjewXypRW/preview",
+        "actions": "https://drive.google.com/file/d/1Xw44Ad3YhmP0rgigYstBk6_-kI1jAEqP/preview" 
+    },
+
+    {
+        "id": "5_minute_passive_squat_hold_challenge_5minutesquatclub_clip_3",
+        "domain": "Online Videos",
+        "text_description": "The human is doing yoga in a room with a purple rug and a white wall.",
+        "header": "Doing yoga-1",
+        "raw_video": "https://drive.google.com/file/d/1XddBdgxWMYOfXA08uUrY6EENnT_gO-vS/preview",
+        "smpl_video": "https://drive.google.com/file/d/1FaH_zbuQSlG4bSRssqcd_y7Dmjm0H3S7/preview",
+        "keypoints": "https://drive.google.com/file/d/1kpEKhgieSX6fEmkF4toUieZwhXTJeKvC/preview",
+        "actions": "https://drive.google.com/file/d/1TQ4JZh6bO27yNhtHaNXLs3DvCRfNcQ3l/preview" 
+    },
+    
+    {
+        "id": "5_minute_refresh_office_stretch_clip_4",
+        "domain": "Online Videos",
+        "text_description": "A woman is doing yoga in a room with a large window, a green plant, and a brown wooden chair.",
+        "header": "Doing yoga-2",
+        "raw_video": "https://drive.google.com/file/d/18ceIIrjsodhfCdswjyAAeWfgroGDYfUp/preview",
+        "smpl_video": "https://drive.google.com/file/d/1Jqbt3l6YLpFJRF8ilCBF6S0uA4x-4Cat/preview",
+        "keypoints": "https://drive.google.com/file/d/17v5qmN1Ol8MfXIhQr4lYMOXg_waKBYdk/preview",
+        "actions": "https://drive.google.com/file/d/1TY31oOm4-wEk8dHDrs53eONC5NEq-Dq5/preview" 
+    },
+
+    {
+        "id": "5_tips_to_improve_walking__after_total_knee_replacement_using_an_agility_ladder__diykneept_clip_3",
+        "domain": "Online Videos",
+        "text_description": "A man is standing on a ladder in an office, doing something with his hands.",
+        "header": "Standing on a ladder",
+        "raw_video": "https://drive.google.com/file/d/1lTicA58ffodXJ1OpoGec31hmhSBtIPc6/preview",
+        "smpl_video": "https://drive.google.com/file/d/1ptDr2jTQhKCaDkT-UBg0TbnnFpcONj-q/preview",
+        "keypoints": "https://drive.google.com/file/d/1UWGVz-8wxKvYZ0hJnvSqSKQiVi3qwFnt/preview",
+        "actions": "https://drive.google.com/file/d/18Zu2xs4uVPU7iJp4EYHZ6CjgSxvjDLxi/preview" 
+    },
+
+    {
+        "id": "000056",
+        "domain": "AMASS",
+        "text_description": "A person walks forward and stumbles to the left, then continues to walk.",
+        "header": "Walk and stumble",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1LWYoqSwktpkgKQdZjpQDb7JxZ3pVVLW8/preview",
+        "actions": "https://drive.google.com/file/d/1nxuYJ5K_yFvn4gC4q7Ju1kkDDHrCp4ch/preview" 
+    },
+
+    {
+        "id": "000162",
+        "domain": "AMASS",
+        "text_description": "The standing person brings their hands up to their armpits and flaps their elbows up and down repeatedly.",
+        "header": "Flap elbows",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1kkfb5SrMe4wiKchUW4NV6wUD3WJ0_Ft3/preview",
+        "actions": "https://drive.google.com/file/d/1YE33OOlxRVCTXnuDz6RJc3CIwOkSBi7O/preview" 
+    },
+
+    {
+        "id": "000300",
+        "domain": "AMASS",
+        "text_description": "A person is perfoming a dance move.",
+        "header": "Dance move",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1mNLRqiKnONrEpxyNF7N34MBthzDGuXMp/preview",
+        "actions": "https://drive.google.com/file/d/1Oqf6FxsDcai3dh-zIzbC7HBQLwetY0UI/preview" 
+    },
+
+    {
+        "id": "000328",
+        "domain": "AMASS",
+        "text_description": "A person raises their right arm and performs a quick waving motion with their hand in a greet-like manner.",
+        "header": "Wave hand",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/13SqjYYiosKUbB2XRK_O_FWQdxU_9Nd0r/preview",
+        "actions": "https://drive.google.com/file/d/1ogr5hKHz5XiPF3mtPWdy_WOjv4z7kf2N/preview" 
+    },
+
+    {
+        "id": "000402",
+        "domain": "AMASS",
+        "text_description": "A person moves their hands and feet up and down while walking in circles.",
+        "header": "Walk in circles",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1d8sct6xZ0vxmyDXH_Mm9GRXtR64C1W4_/preview",
+        "actions": "https://drive.google.com/file/d/1zcBtBJ2VloWOQI8Wel0tKxUmv9LuGX-R/preview" 
+    },
+
+    {
+        "id": "000573",
+        "domain": "AMASS",
+        "text_description": "A person is dancing the waltz.",
+        "header": "Dancing the waltz",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1VihejE8F0LcUGZIU9Kdnt4KU-7Nv7gAp/preview",
+        "actions": "https://drive.google.com/file/d/1t1oM7Pc4fNSlzZrubLMlQShIQgNbnEnl/preview" 
+    },
+
+    {
+        "id": "000657",
+        "domain": "AMASS",
+        "text_description": "A man stands still and sways back and forth.",
+        "header": "Sway back and forth",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1BvdUm4zWFw6VPWTCFDyVijsQLX8f4C72/preview",
+        "actions": "https://drive.google.com/file/d/12jFzcvMYtyb93MPmL2-wxCKIcOFOPvTv/preview" 
+    },
+
+    {
+        "id": "000754",
+        "domain": "AMASS",
+        "text_description": "A person lifts their arms alternating up and down.",
+        "header": "Lift arms up and down",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1kynZmWJ7eU2HAY_iWQ1I2y_CU6ct94sK/preview",
+        "actions": "https://drive.google.com/file/d/1GpdSAZfwRCKhzkM1ijh7OEZ9inHSyPmt/preview" 
+    },
+
+    {
+        "id": "000987",
+        "domain": "AMASS",
+        "text_description": "A person walks backwards and then stops.",
+        "header": "Walk backwards",
+        "raw_video": "about:blank",
+        "smpl_video": "about:blank",
+        "keypoints": "https://drive.google.com/file/d/1UbNqVEGc0ReUkif8yKwd8HARVh8SQOok/preview",
+        "actions": "https://drive.google.com/file/d/1wiLF_Swk20U0vODH0oqT0ajbL9b9x1fa/preview" 
+    },
+
+    {
+        "id": "ALS_IceBucket_Challenge_17_clip1",
+        "domain": "MotionX",
+        "text_description": "A man is standing on a balcony and pouring water on his head.",
+        "header": "Pouring water on head",
+        "raw_video": "https://drive.google.com/file/d/14eMIDJkmT1lhNLCjVmaW6JDwA8FO-QHN/preview",
+        "smpl_video": "https://drive.google.com/file/d/1F3frEIHKLTa_gSVHi80DzRe2hs0HkR-H/preview",
+        "keypoints": "https://drive.google.com/file/d/1_Q3RqXlA5AWulLVHvbaLLRVGgFN-b8rl/preview",
+        "actions": "https://drive.google.com/file/d/1CQ7BzEI-v2YV5_u71bNCe6Fn897h6wKH/preview" 
+    },
+
+    {
+        "id": "Ancient_Drum_3_clip8",
+        "domain": "MotionX",
+        "text_description": "A man is playing a drum set in a room.",
+        "header": "Playing drum set",
+        "raw_video": "https://drive.google.com/file/d/1INMWfbgg8x9jFNnYjMPiI3_kuQdLf7D3/preview",
+        "smpl_video": "https://drive.google.com/file/d/1H9FVfAfviCzZFD8xb-FYbxuWfXUP7n4-/preview",
+        "keypoints": "https://drive.google.com/file/d/1gSFWW_iZ-igT01iVisetkzEIoF1J61cD/preview",
+        "actions": "https://drive.google.com/file/d/1HCtustqjuPHVe4-wLhjeGoRgG9-6Pjgw/preview" 
+    },
+
+    {
+        "id": "arm_wave_4_clip1",
+        "domain": "MotionX",
+        "text_description": "The human is doing a dance in a red room.",
+        "header": "Dancing in a red room",
+        "raw_video": "https://drive.google.com/file/d/19zTyhkV1Nuwp_CwX8JofNHM3eANwQkax/preview",
+        "smpl_video": "https://drive.google.com/file/d/1Lwbv2gUDHzvxyj2P_g1pmLv0WzKjMH7E/preview",
+        "keypoints": "https://drive.google.com/file/d/1lMRPUR6-TcSg8SrIA0NugFY-zP0rSqJJ/preview",
+        "actions": "https://drive.google.com/file/d/1QzLp9nWX06Gyt54eDVy5qvtxVDogvMeT/preview" 
+    },
+
+    {
+        "id": "back_pain_relief_if_it_hurts_when_you_bend_forward_clip_4",
+        "domain": "Online Videos",
+        "text_description": "A man is standing in a room and using a treadmill to exercise.",
+        "header": "Using treadmill",
+        "raw_video": "https://drive.google.com/file/d/1RsQrUitYHOkTyh41XNaxg-6bsKzTsul9/preview",
+        "smpl_video": "https://drive.google.com/file/d/1dBsrLxkkOlLN0UMXNY83ERxnc1_C73iF/preview",
+        "keypoints": "https://drive.google.com/file/d/1Wd9NGP37q-2cHlyRhOK4poD81njDXfZz/preview",
+        "actions": "https://drive.google.com/file/d/14Y0d9i1N0SIC9L4SbjFG4P9ArEDtwxlJ/preview" 
+    },
+
+    {
+        "id": "balancebeam_rotate_3_clip1",
+        "domain": "MotionX",
+        "text_description": "A woman is doing gymnastics on a balance beam in a gym.",
+        "header": "Gymnastics on balance beam",
+        "raw_video": "https://drive.google.com/file/d/1rIZwkhmGo66V3ZcDMrXJpmHv9_4gmaCj/preview",
+        "smpl_video": "https://drive.google.com/file/d/1T-7qZrZ3z7q5A3VENBCf6cm5Of0O84GJ/preview",
+        "keypoints": "https://drive.google.com/file/d/11uB1b4HFQRdpvktFnzvraysvBqm53lDA/preview",
+        "actions": "https://drive.google.com/file/d/1tCZenkkB0huimbS3SKXM1QAlAF6dVgh5/preview" 
+    },
+
+    {
+        "id": "baseball_hitting_mechanics_simplified_clip_4",
+        "domain": "Online Videos",
+        "text_description": "The human in the video is a man doing something with a baseball bat on a baseball field.",
+        "header": "Using baseball bat",
+        "raw_video": "https://drive.google.com/file/d/1_FEkgMlMip6rsVZj6fAUeHI2LWS3r3pG/preview",
+        "smpl_video": "https://drive.google.com/file/d/1VG_95tDnlIGNGZUmVs_YGEWroY5hGVHK/preview",
+        "keypoints": "https://drive.google.com/file/d/1izPx3oJwteKywtXf9w-Hi6-o3w2_YSZU/preview",
+        "actions": "https://drive.google.com/file/d/1CYSibQuv-1nTTXAec1HeMMTssPcB6Vym/preview" 
+    },
+
+    {
+        "id": "baseball_pitch_15_clip1",
+        "domain": "MotionX",
+        "text_description": "The human is a man standing on a baseball field, throwing a baseball.",
+        "header": "Throwing baseball",
+        "raw_video": "https://drive.google.com/file/d/1rGdy6pkI0jd90f7Sls_bSWKdHEeebU8h/preview",
+        "smpl_video": "https://drive.google.com/file/d/1IC79VRe7g68DHsZTtZNz8smLV3Xr39lz/preview",
+        "keypoints": "https://drive.google.com/file/d/1XSiTqqO8XGWoR1KD9iZ-9xz4TL7gSGGA/preview",
+        "actions": "https://drive.google.com/file/d/1YIxb--_SBavM0t4QchpCqSVAHvDQDfVb/preview" 
+    },
+
+    {
+        "id": "basketball_dribble_11_clip1",
+        "domain": "MotionX",
+        "text_description": "The human in the video is a man playing basketball in a gym.",
+        "header": "Playing basketball",
+        "raw_video": "https://drive.google.com/file/d/1OXcIi7daVXGd5AwgfuB514msK_mQMd0B/preview",
+        "smpl_video": "https://drive.google.com/file/d/1nWegSbfEExUADvsy3O1BQjfgHiZC34qC/preview",
+        "keypoints": "https://drive.google.com/file/d/1s_cVHvRsz6oqV2XwanibJvx8AJlKVWGI/preview",
+        "actions": "https://drive.google.com/file/d/1-rarKvxXadEEZsn_Byd5NlzKOyz5uQPW/preview" 
+    },
+
+    {
+        "id": "basketball_layup_4_clip1",
+        "domain": "MotionX",
+        "text_description": "The human is playing basketball in the gym, dribbling the ball with his hands.",
+        "header": "Dribbling basketball",
+        "raw_video": "https://drive.google.com/file/d/1lqGNWLKMqCftY9FwcW-GuWKTVBE9rqI4/preview",
+        "smpl_video": "https://drive.google.com/file/d/1ORp1-t4PAtK1XvWeZCJwq-3qlKT8B17N/preview",
+        "keypoints": "https://drive.google.com/file/d/1XuWkPGtveNUVqumeA2uHsADgmxyjKyt8/preview",
+        "actions": "https://drive.google.com/file/d/18gXavNRYwT2hE0oGb0z07cRcMnhBxlH7/preview" 
+    },
+
+    {
+        "id": "Bundi_and_standing_at_the_same_time_1_clip1",
+        "domain": "MotionX",
+        "text_description": "The human is doing a workout in an empty room, using a yellow ball and a white chair.",
+        "header": "Workout using ball and chair",
+        "raw_video": "https://drive.google.com/file/d/1j620CF4IN0jkoz2m-k224_VZRVQbnwNw/preview",
+        "smpl_video": "https://drive.google.com/file/d/1JESNZj7YatKfYrm7_QQpAzg7RZFHf6xg/preview",
+        "keypoints": "https://drive.google.com/file/d/1ywR_NmrYa8dxHA2w9nNknBEsOkC7UwJn/preview",
+        "actions": "https://drive.google.com/file/d/1DVm5woC4KO2GLhNoiPGEn08X3EvZX-K9/preview" 
+    },
+
+    {
+        "id": "Cheer_Up_while_standing_2_clip1",
+        "domain": "MotionX",
+        "text_description": "A man is standing in an office and doing something with his hands.",
+        "header": "Standing in office",
+        "raw_video": "https://drive.google.com/file/d/1OFE9WLT6FMIeYnbDS1MdCy37Q7R4nUnt/preview",
+        "smpl_video": "https://drive.google.com/file/d/1SUf9K2NlPgxX9LuX3uvjArliRaN08pox/preview",
+        "keypoints": "https://drive.google.com/file/d/1-zjGpMEj1S6yhXMuWNoL9nBALxdksd39/preview",
+        "actions": "https://drive.google.com/file/d/12tnaypRQlclcKpYntJ09762dyjVDJAlF/preview" 
+    },
+
+    {
+        "id": "Kung_Fu_Wushu_Chain_Whip_1_clip1",
+        "domain": "MotionX",
+        "text_description": "A man is doing something with a pole in a backyard.",
+        "header": "Interact with pole",
+        "raw_video": "https://drive.google.com/file/d/120VDD6IO9LaJ4vNE363ZP4M0XOrUvyyn/preview",
+        "smpl_video": "https://drive.google.com/file/d/1MKukt_JcVR1jqyyIKU4c_35GBJIl_zzU/preview",
+        "keypoints": "https://drive.google.com/file/d/1vp-WgUp4qyEffCww6ghrfL6cQPoxLWBw/preview",
+        "actions": "https://drive.google.com/file/d/1eZwXw_NkXPiPFDzcqeM0Z3qt-LMkLs2S/preview" 
+    },
+
+    {
+        "id": "Play_Bass_5_clip2",
+        "domain": "MotionX",
+        "text_description": "A woman is playing the cello in the video.",
+        "header": "Playing cello",
+        "raw_video": "https://drive.google.com/file/d/1wtCvXxZN1v63fJf4HovXQEiwNyKp5deZ/preview",
+        "smpl_video": "https://drive.google.com/file/d/12BPA87YPzeC6qZ0LNtzJiCcmTKSvkyha/preview",
+        "keypoints": "https://drive.google.com/file/d/1DAQqdWJSjiBXlG4JvMQUNG-KOb-qRS7F/preview",
+        "actions": "https://drive.google.com/file/d/1KlKRa3oGqMVQTU08a_S8F4_g7kBs3-_U/preview" 
+    },
+
+    {
+        "id": "Right_drop_down_crouch_1_clip1",
+        "domain": "MotionX",
+        "text_description": "The human is doing a workout in the gym, specifically doing squats.",
+        "header": "Doing squats",
+        "raw_video": "https://drive.google.com/file/d/1SFHDJIJC_qRnSmr2tCXaec4P_4Y8Ww3p/preview",
+        "smpl_video": "https://drive.google.com/file/d/1Z55Gy5DDIVDAr1JSHsjrhNGqOiyahu1W/preview",
+        "keypoints": "https://drive.google.com/file/d/19-7cPnBo-IcFdz_uj08e6eEklEAWdMvQ/preview",
+        "actions": "https://drive.google.com/file/d/1i6z6hZP3_YHHN8RS3A8QaQnaaTHMg795/preview" 
+    },
+
+    {
+        "id": "Shaolin_Kung_Fu_Wushu_Three_Section_Staff_Training_10_clip2",
+        "domain": "MotionX",
+        "text_description": "A man is doing tai chi in the backyard of a house, using a sword to practice his movements.",
+        "header": "Doing tai chi with sword",
+        "raw_video": "https://drive.google.com/file/d/1wg9GL2FCAIFO7zQ1ssmtZKYpRBTUv67H/preview",
+        "smpl_video": "https://drive.google.com/file/d/1nLhrqt42rIZ7AzYcpZaw30sKcBJHth7c/preview",
+        "keypoints": "https://drive.google.com/file/d/1UZ1VX8f_AerEUmOlB8DICNsyrrLQzYOv/preview",
+        "actions": "https://drive.google.com/file/d/1WEfHJAtRBNHYIPzlgiQlL6T-KcaXVNdc/preview" 
+    },
+
+    {
+        "id": "The_squat_side_leg_lifts_1_clip1",
+        "domain": "MotionX",
+        "text_description": "The human is doing squats in a gym.",
+        "header": "Doing squats in gym",
+        "raw_video": "https://drive.google.com/file/d/1pGTSu_AUGMseNeggRU-t_UxP-6--FAz6/preview",
+        "smpl_video": "https://drive.google.com/file/d/1UWndgRdwJ6fuxinlJxGA-GGOsCts9e47/preview",
+        "keypoints": "https://drive.google.com/file/d/10vfhh2Y6C9m0cR2cBZuSNMGBhcat0wvY/preview",
+        "actions": "https://drive.google.com/file/d/1RblO6lIYtOcRvF4l9a91HZIyJpNljvwW/preview" 
+    },
+
+    {
+        "id": "Ways_to_Jump_+_Sit_+_Fall_Basketball_Fake_Out_clip1",
+        "domain": "MotionX",
+        "text_description": "The person performs various jumping, sitting, falling, and basketball maneuvers to fake out his opponent.",
+        "header": "Basketball maneuvers",
+        "raw_video": "https://drive.google.com/file/d/1Gfz1Gh-Ev9WoLMXTnsGYv_Y9KFuIASOR/preview",
+        "smpl_video": "https://drive.google.com/file/d/1VwdNVaF9BWchyKZtD8QWn4hEr4fIprhu/preview",
+        "keypoints": "https://drive.google.com/file/d/1xtfUK70Z-xuE0yNwLraI_kvalPo_ZrUB/preview",
+        "actions": "https://drive.google.com/file/d/1hO34t0R55Jr2NxlIJoZ45uW3FxITTta2/preview" 
+    },
+
+    {
+        "id": "Jab_Jab_Cross_To_Scissor_R_clip_1",
+        "domain": "MotionX",
+        "text_description": "A person performs Jab Jab Cross To Scissor.",
+        "header": "Jab Jab Cross To Scissor",
+        "raw_video": "https://drive.google.com/file/d/1NPnazF4ZWvOkAg8TMGw_MUPtsRrWZ8le/preview",
+        "smpl_video": "https://drive.google.com/file/d/1FC3ifE0izLZWQDtOyC1PBfjDpgXIsWZS/preview",
+        "keypoints": "https://drive.google.com/file/d/1usnftmHbj6G0n-lA9kb87NKsXDg30HU-/preview",
+        "actions": "https://drive.google.com/file/d/1TuCeDNz-DxWL7hiE6q11Y1_0kn6Gj5o4/preview" 
+    },
+
+    {
+        "id": "Lateral_Squat_Walk_clip_1",
+        "domain": "MotionX",
+        "text_description": "A person is performing a Lateral Squat Walk.",
+        "header": "Lateral Squat Walk",
+        "raw_video": "https://drive.google.com/file/d/17fJnls_YT_eijSvq2W411lwYhHyYQXS5/preview",
+        "smpl_video": "https://drive.google.com/file/d/1zsSjte12_yhjCSzEuj90TFuO2718rTjC/preview",
+        "keypoints": "https://drive.google.com/file/d/1y_MC8bnc2Zw08RVU1VgfryCqQGXirlJF/preview",
+        "actions": "https://drive.google.com/file/d/15Pt8Ff1ZkLsYqOnFiuKZY1dW5aQsBPap/preview" 
+    },
+
+    {
+        "id": "battlerope_jumpingjack_2_clip1",
+        "domain": "HAA500",
+        "text_description": "A person is performing a Battle-rope Jumping-jack.",
+        "header": "Battle-rope Jumping-jack",
+        "raw_video": "https://drive.google.com/file/d/1pwBxyC-R97kdXbZQ9kxW0wzttbtkxh39/preview",
+        "smpl_video": "https://drive.google.com/file/d/12c5oY02b8bquzFe-CkBlunsbi9HZ27-x/preview",
+        "keypoints": "https://drive.google.com/file/d/1sJm6Hp7sK0i2XkUbMK4D6dGubsJaiaot/preview",
+        "actions": "https://drive.google.com/file/d/1yPeGULtRVyPExipaoc2MooQ_v8wyleQf/preview" 
+    },
+
+    {
+        "id": "Brushing_Floor_clip_1",
+        "domain": "HAA500",
+        "text_description": "The person is brushing the floor.",
+        "header": "Brushing the floor",
+        "raw_video": "https://drive.google.com/file/d/1YBgubZcwr8o_p7PQzlPaafnA0-bDnyoE/preview",
+        "smpl_video": "https://drive.google.com/file/d/10WwrZUyJDuXOFPqEADAc13jKr9G1rk6Q/preview",
+        "keypoints": "https://drive.google.com/file/d/1gKxQuG70KKYF1DhdUClONOlZD28kez4O/preview",
+        "actions": "https://drive.google.com/file/d/1Jy4B8n9XxWXloGUsnrVBID0CPLkCIjea/preview" 
+    },
+
+    {
+        "id": "Mopping_The_Floor_And_Walking_At_The_Same_Time_clip_1",
+        "domain": "IDEA400",
+        "text_description": "The person is mopping the floor and walking at the same time.",
+        "header": "Mopping the floor",
+        "raw_video": "https://drive.google.com/file/d/15yFoEbCku8zKePqHnnNx1RHFBWvhMA8Q/preview",
+        "smpl_video": "https://drive.google.com/file/d/1E11C5eFWOZ9VeDvc0xkORlS8faCG494J/preview",
+        "keypoints": "https://drive.google.com/file/d/1UV6oxPJ4n3-qVimTEOLoZa44-VNEfcQL/preview",
+        "actions": "https://drive.google.com/file/d/171L45q5uDcyBG0KkZ9DZM6eeZLAaFNI8/preview" 
+    },
+
+    {
+        "id": "Shake_hands_and_say_goodbye_while_standing_1_clip1",
+        "domain": "IDEA400",
+        "text_description": "A woman and a man are shaking hands and saying goodbye while standing.",
+        "header": "Shaking hands and goodbye",
+        "raw_video": "https://drive.google.com/file/d/1ouaTtGhj78J97vm4lJegcBYgV7wU7KWZ/preview",
+        "smpl_video": "https://drive.google.com/file/d/1CszbiElQRxOFFMTPDENTJFamHuDFfGNN/preview",
+        "keypoints": "https://drive.google.com/file/d/1WryqL0iyLcspAEovs17PJ0vGgkok1YUh/preview",
+        "actions": "https://drive.google.com/file/d/18wXya3yeA25gb8ZkhTWLAPuVFB5b6VCf/preview" 
+    },
+
+    {
+        "id": "Tai_Chi_Kungfu_2_clip2",
+        "domain": "MotionX",
+        "text_description": "A person is practicing Tai Chi Kungfu.",
+        "header": "Practicing Tai Chi Kungfu",
+        "raw_video": "https://drive.google.com/file/d/14wXwF5ZO6oP7rix1OB-0lcXKiU07cbcz/preview",
+        "smpl_video": "https://drive.google.com/file/d/1nSoM0JCo6b1ysWsAq6VfNhgysuDAg3xr/preview",
+        "keypoints": "https://drive.google.com/file/d/1Hqbn_bIQgh0icOm6cKoBdIEVYqaebGVm/preview",
+        "actions": "https://drive.google.com/file/d/1qQbK40AuIWzs2GWFGPqvtLCgZSvfrFm7/preview" 
+    },
+
+    {
+        "id": "brush_tooth_1_clip1",
+        "domain": "MotionX",
+        "text_description": "A person brushes their teeth.",
+        "header": "Brushing teeth",
+        "raw_video": "https://drive.google.com/file/d/1rLvFUE7ODCKKMqMd5xyoQcC1MwwdnKWl/preview",
+        "smpl_video": "https://drive.google.com/file/d/1XEnY88HwAxLvImQSfXXGJA-VAnPSotej/preview",
+        "keypoints": "https://drive.google.com/file/d/1yNDLzRu8IFvEuR5BOMSVHoSG6qYG5e8i/preview",
+        "actions": "https://drive.google.com/file/d/151GYq7KA2hdpBINySAGwG1QMH2oBzMgo/preview" 
+    },
+
+    {
+        "id": "golf_sequence_drill__how_to_sync_your_golf_arm_swing_to_your_golf_hip_turn__golf_sequencing_clip_5",
+        "domain": "Online Videos",
+        "text_description": "The human is practicing golf in the video.",
+        "header": "Practicing golf",
+        "raw_video": "https://drive.google.com/file/d/1bC3e75V58RBH8c-itiudw7DxeqRtmbvc/preview",
+        "smpl_video": "https://drive.google.com/file/d/1Sv9Wt6s0qtuD_KzL1KnOfUuW619Ai95i/preview",
+        "keypoints": "https://drive.google.com/file/d/1iP9lF70RHSzc4Isng3Q3C_YtvL4QJG1H/preview",
+        "actions": "https://drive.google.com/file/d/1Jezo3v0UV-7EDO5WXnRpKWrvIP-aZZB5/preview" 
+    },
+
+    {
+        "id": "karate__oizuki_amp_gyakuzuki__lunge_punch__amp_reverse_punch_clip_4",
+        "domain": "Online Videos",
+        "text_description": "The human is practicing karate in a room.",
+        "header": "Practicing karate",
+        "raw_video": "https://drive.google.com/file/d/1gsK4MeUTa0_vTwO9FvyJjC7A0IKM2XDk/preview",
+        "smpl_video": "https://drive.google.com/file/d/1pBNm_nHWnMw49iYXiGk_ZMp4E53l0_ZQ/preview",
+        "keypoints": "https://drive.google.com/file/d/1VHbcZnnJU5HAjJXbvrABPy37JS7H0Y8U/preview",
+        "actions": "https://drive.google.com/file/d/1K5st0rpsjRmYSdjEqYd-D6raVss0EraV/preview" 
+    },
+
+    {
+        "id": "practice_staying_low_with_the_tennis_lunge_exercise_clip_2",
+        "domain": "Online Videos",
+        "text_description": "A man is standing on a tennis court, holding a tennis racket and looking at the camera.",
+        "header": "Holding tennis racket",
+        "raw_video": "https://drive.google.com/file/d/11_zGn98OdynfVTUNzLsNEiViNNIeoPIa/preview",
+        "smpl_video": "https://drive.google.com/file/d/1LS9awlpyDDEYmQtEafcrexms8J7GMEWI/preview",
+        "keypoints": "https://drive.google.com/file/d/1PuSj5PVuhOEY4131Pb0XH8SZVYYj3qXk/preview",
+        "actions": "https://drive.google.com/file/d/1spgezfMWouXSQi7EzRbrHlswuOsKCfKA/preview" 
+    },
+
+    {
+        "id": "stop_dancing_awkward__bad_habit_15__staying_in_your_box__clip_2",
+        "domain": "Online Videos",
+        "text_description": "The human is dancing in a blue room.",
+        "header": "Dancing in blue room",
+        "raw_video": "https://drive.google.com/file/d/1jjjdQV4_e6egPr7e9_GGsjv4CeeKyOvL/preview",
+        "smpl_video": "https://drive.google.com/file/d/1rnr8k45a51-bCLZ6D_phLz8R_NZSNziE/preview",
+        "keypoints": "https://drive.google.com/file/d/1iHzRX4nXTd5dvhgaLdjBql_-EcHk3ED0/preview",
+        "actions": "https://drive.google.com/file/d/1R4VpWlNxXxgY5V3YzPtdVyraGvtRdvh_/preview" 
+    },
+
+    {
+        "id": "the_perfect_pull_up___do_it_right_clip_5",
+        "domain": "Online Videos",
+        "text_description": "A young man is doing pull-ups on a bar in an outdoor gym.",
+        "header": "Doing pull-ups",
+        "raw_video": "https://drive.google.com/file/d/1kke4Oz8PibagfmP2nAumaSS_WoU-Qn4v/preview",
+        "smpl_video": "https://drive.google.com/file/d/1snkExPgKZSPhUm2v23yKT0W7DS3yTId_/preview",
+        "keypoints": "https://drive.google.com/file/d/1rfd4ufENSzE6eRrbGrHJPESJ-Jimh6Fa/preview",
+        "actions": "https://drive.google.com/file/d/1ldpgV5IWywNRixw2D38H5Y_obdVBd9WO/preview" 
+    }
+]

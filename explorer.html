@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Humanoid-X Data Explorer with Bulma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        .is-halfheight {
+            height: 50vh;
+            overflow-y: scroll;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+
+        .duck_icon {
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .category {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .task-list {
+            border: none;
+        }
+
+        .task-list:hover {
+            background-color: #f2f0f0;
+        }
+
+        .active,
+        .category:hover {
+            background-color: #ccc;
+        }
+
+        .task-active {
+            background-color: #f3f0f0;
+        }
+
+        .category:after {
+            content: "\002B";
+            color: #000000;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .categorycontainer {
+
+            max-height: 180vh;
+            overflow-y: scroll;
+        }
+
+        .label {
+            padding: 5px;
+            width: 40%;
+        }
+
+        .other {
+            background-color: #e7e7e7;
+            color: rgb(82, 81, 81);
+            font-size: small;
+            width: 40%;
+            height: 22px;
+            position: relative;
+        }
+
+        .taskid-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .taskid-label {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    </style>
+    <!-- </style> -->
+</head>
+
+<body>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-3">Humanoid-X Data Explorer</h2>
+            <div class="notification is-info">
+                <md-block>
+                    Below we show *a small subset of* motion clips in **Humanoid-X** dataset, which allows you to explore the data in detail.
+                </md-block>
+            </div>
+
+            <div class="columns">
+                <div class="column is-one-quarter categorycontainer" id="categoriesContainer">
+
+                </div>
+                <div class="column">
+                    <!-- Data Explorer UI Portions -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <!-- Text Description -->
+                                <div class="box">
+                                    <h5>Text Description</h5>
+                                    <div>
+                                        <md-block id="text_des-text"></md-block>
+                                    </div>
+                                </div>
+
+                                <!-- Raw Video -->
+                                <div class="box">
+                                    <h5>Raw Video</h5>
+                                    <iframe id="raw_videoViewer" src="" allow="autoplay"
+                                        allowfullscreen></iframe>
+                                    <div>
+                                        <md-block id="warning-raw-video">
+                                            Please note that for motion clip from AMASS dataset, the raw video is not available.
+                                        </md-block>
+                                    </div>
+                                </div>
+
+                                <!-- SMPL Video -->
+                                <div class="box">
+                                    <h5>SMPL Video</h5>
+                                    <iframe id="smpl_videoViewer" src="" allow="autoplay"
+                                        allowfullscreen></iframe>
+                                    <div>
+                                        <md-block id="warning-smpl-video">
+                                            Please note that for motion clip from AMASS dataset, the SMPL video is not available.
+                                        </md-block>
+                                    </div>
+                                </div>
+
+                                <!-- Humanoid Keypoints (in video form) -->
+                                <div class="box">
+                                    <h5>Humanoid Keypoints</h5>
+                                    <iframe id="keypointsViewer" src="" width="480" height="360" allow="autoplay"
+                                        allowfullscreen></iframe>
+                                </div>
+
+                                <!-- Humanoid Actions (in video form) -->
+                                <div class="box">
+                                    <h5>Humanoid Actions</h5>
+                                    <iframe id="actionsViewer" src="" width="480" height="360" allow="autoplay"
+                                        allowfullscreen></iframe>
+                                </div>
+
+                                <div>
+                                    Task ID:
+                                    <span class="taskid-label" id="taskid-text"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // fetch('./static/data/test_small_recording.json')
+            // fetch(`./static/data_sort_list.json`)
+            fetch(`./static/data_sort_full.json`)
+                .then(response => response.json())
+                .then(jsonData => {
+                    const container = document.getElementById('categoriesContainer');
+                    const taskList = document.createElement('ul');
+                    taskList.classList.add('panel');
+
+                    const sortedEntries = Object.entries(jsonData).sort((a, b) => 
+                        a[0].localeCompare(b[0])
+                    );
+
+                    sortedEntries.forEach(([title, taskId]) => {
+                        const listItem = document.createElement('li');
+                        listItem.classList.add('task-list');
+                        listItem.textContent = title;
+
+                        listItem.addEventListener('click', () => {
+                            fetch(`./static/data_list_config.json`)
+                                .then(response => response.json())
+                                .then(taskData => {
+                                    for (let i = 0; i < taskData.length; i++) {
+                                        if (taskData[i].id == taskId) {
+                                            taskData = taskData[i];
+                                            break;
+                                        }
+                                    }
+                                    
+                                    document.getElementById('taskid-text').innerHTML = taskId;
+                                    document.getElementById('text_des-text').innerHTML = taskData.text_description;
+                                    document.getElementById('raw_videoViewer').src = taskData.raw_video;
+                                    document.getElementById('smpl_videoViewer').src = taskData.smpl_video;
+                                    document.getElementById('keypointsViewer').src = taskData.keypoints;
+                                    document.getElementById('actionsViewer').src = taskData.actions;
+
+                                    if (!document.getElementById('raw_videoViewer').src ||
+                                        document.getElementById('raw_videoViewer').src === '' ||
+                                        document.getElementById('raw_videoViewer').src === "about:blank") {
+                                        document.getElementById('raw_videoViewer').style.display = 'none';
+                                        document.getElementById('warning-raw-video').style.display = 'block';
+                                    } else {
+                                        document.getElementById('raw_videoViewer').style.display = 'block';
+                                        document.getElementById('warning-raw-video').style.display = 'none';
+                                    }
+
+                                    if (!document.getElementById('smpl_videoViewer').src ||
+                                        document.getElementById('smpl_videoViewer').src === '' ||
+                                        document.getElementById('smpl_videoViewer').src === "about:blank") {
+                                        document.getElementById('smpl_videoViewer').style.display = 'none';
+                                        document.getElementById('warning-smpl-video').style.display = 'block';
+                                    } else {
+                                        document.getElementById('smpl_videoViewer').style.display = 'block';
+                                        document.getElementById('warning-smpl-video').style.display = 'none';
+                                    }
+                                });
+                        });
+
+                        listItem.addEventListener("click", function () {
+                            var preClick = document.getElementsByClassName("task-list");
+                            for (let i = 0; i < preClick.length; i++) {
+                                preClick[i].classList.remove("task-active");
+                            }
+                            listItem.classList.toggle("task-active");
+                        });
+
+                        taskList.appendChild(listItem);
+                    });
+
+                    container.appendChild(taskList);
+                    taskList.style.maxHeight = taskList.scrollHeight + "px";
+                })
+                .catch(error => console.error('Error loading the JSON file:', error));
+        });
+
+    </script>
+</body>
+</html>

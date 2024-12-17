@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
+  <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning from Massive Human Videos for Universal Humanoid Pose Control</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Learning from Massive Human Videos for Universal Humanoid Pose Control</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block">
+              <a href="">Author List</a><sup>1</sup>,</span> -->
+            <span class="author-block">
+              <a href="https://pointscoder.github.io/">Jiageng Mao</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://sihengz02.github.io/">Siheng Zhao</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/songsq21">Siqi Song</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/tianheng-shi-5244b8201/">Tianheng Shi</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jay-ye.github.io/">Junjie Ye</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://robo-alex.github.io/">Mingtong Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://geng-haoran.github.io/">Haoran Geng</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/vitorguizilini/">Vitor Guizilini</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yuewang.xyz/">Yue Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block"><sup>1</sup>University of Washington,</span> -->
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+            <span class="author-block"><sup>1</sup>University of Southern California,</span>
+            <span class="author-block"><sup>2</sup>UC Berkeley,</span>
+            <span class="author-block"><sup>3</sup>Toyota Research Institute</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sihengz02/UH-1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>UH-1</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/USC-GVL/universal-humanoid-10-6760c242f3591a933560a23a"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Humanoid-X</span>
+                </a>
+              </span>
+              <!-- Data Viewer. -->
+              <span class="link-block">
+                <a href="explorer.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-desktop"></i>
+                  </span>
+                  <span>Data Viewer</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper video. -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop height="100%">
+        <!-- playsinline -->
+        <source src="./static/videos/teaser-uh1.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!--/ Paper video. -->
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Scalable learning of humanoid robots is crucial for their deployment in real-world applications.
+            While traditional approaches primarily rely on reinforcement learning or teleoperation to achieve whole-body control,
+            they are often limited by the diversity of simulated environments and the high costs of demonstration collection.
+            In contrast, human videos are ubiquitous and present an untapped source of semantic and motion information that could
+            significantly enhance the generalization capabilities of humanoid robots.
+          </p>
+          <p>
+            This paper introduces Humanoid-X, a large-scale dataset of over 20 million humanoid robot poses with corresponding
+            text-based motion descriptions, designed to leverage this abundant data.
+            Humanoid-X is curated through a comprehensive pipeline: data mining from the Internet, video caption generation,
+            motion retargeting of humans to humanoid robots, and policy learning for real-world deployment.
+            With Humanoid-X, we further train a large humanoid model, UH-1, which takes text instructions as input and outputs
+            corresponding actions to control a humanoid robot.
+          </p>
+          <p>
+            Extensive simulated and real-world experiments validate that our scalable training approach leads to superior
+            generalization in text-based humanoid control, marking a significant step toward adaptable, real-world-ready humanoid robots.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+<!-- / Abstract. -->
+
+<!-- Demo video. -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <!-- <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Robot Demo</h2>
+    </div> -->
+    <!-- <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop height="100%">
+        <source src="./static/videos/robot-demo-uh1.mp4"
+                type="video/mp4">
+      </video>
+    </div> -->
+
+    <!-- Head -->
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Text Conditioned Humanoid Control</h2>
+    </div>
+    <!--/ Head -->
+    </br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-5">
+        <h3 class="title is-4">Play Piano</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/play_piano_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Play Drums</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/play_drums_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Play Violin</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/play_violin_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-5">
+        <h3 class="title is-4">Play Guitar</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/play_guitar_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Wave to a Friend</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/wave_to_a_friend_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Play Golf</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/play_golf_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-5">
+        <h3 class="title is-4">Right Hand Punch</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/right_hand_punch_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Shoot a Basketball</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/shoot_a_basket_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Clap Hands</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/clap_hands_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-5">
+        <h3 class="title is-4">Pray</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/pray_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Dance</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/dance_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Boxing</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/boxing_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    </br>
+    <!-- Head -->
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Human-Humanoid Interaction</h2>
+    </div>
+    <!--/ Head -->
+    </br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-5">
+        <h3 class="title is-4">Embrace</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/embrace_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">High Five</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/high_five_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-5">
+        <h3 class="title is-4">Shake Hand</h3>
+        <video id="teaser" controls autoplay muted loop height="100%">
+          <!-- playsinline -->
+          <source src="./static/videos/shake_hand_demo.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--/ Demo video. -->
+
+<!-- Dataset. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Humanoid-X Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid-X dataset consists of 163,800 pairs of motion samples
+            \( \langle \mathcal{V}, \mathcal{T}, \mathcal{P}_{human}, \mathcal{P}_{robot}, \mathcal{A}_{robot} \rangle \)
+            from Internet videos:
+          </p>
+          <p>
+            i. We mine massive human-centric video clips \( \mathcal{V} \) from the Internet.
+          </p>
+          <p>
+            ii. We extract text-based action descriptions \( \mathcal{T} \) and 3D human
+            poses \( \mathcal{P}_{human} \) from the video clips.
+          </p>
+          <p>
+            iii. We retarget the motions from humans to humanoid robots, resulting in
+            humanoid keypoints \( \mathcal{P}_{robot} \) for high-level control.
+          </p>
+          <p>
+            iv. We employ reinforcement learning to generate physically deployable
+            humanoid actions \( \mathcal{A}_{robot} \).
+          </p>
+          <p>
+            In this manner, we get the Humanoid-X dataset which is leveraged to distill a universal humanoid pose control policy.
+          </p>
+        </div>
+        <div class="column is-full has-text-centered">
+          <img src="./static/images/humanoidx.jpg"
+               class="humanoidx-image"
+               alt="Humanoid-X pipeline image."/>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+<!--/ Dataset. -->
+
+<!-- UH-1 Model. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Header. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Universal Humanoid-1 (UH-1)</h2>
+      </div>
+    </div>
+    <!--/ Header. -->
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-3">Pipeline</h2> -->
+
+        <!-- Model Architecture. -->
+        <div class="content has-text-justified">
+          <p>
+            UH-1 leverages the Transformer for scalable learning.
+            Humanoid actions are first tokenized into discrete action tokens.
+            Then, the UH-1 Transformer is trained, which takes text commands as inputs
+            and auto-regressively generates the corresponding humanoid action tokens.
+          <!-- </p>
+          <p> -->
+            With the input text instructions \( \mathcal{T} \),
+            UH-1 can either generate high-level humanoid keypoints \( \mathcal{P}_{robot} \)
+            (text-to-keypoint) for the goal-conditioned policy \( \pi \)
+            to control the humanoid robot in closed-loop, or generate robotic actions
+            \( \mathcal{A}_{robot} \) for direct open-loop control (text-to-action).
+          </p>
+        </div>
+        <div class="column is-full has-text-centered">
+          <img src="./static/images/dataset_long.png"
+               style="width: 100%; height: auto;"
+               alt="Humanoid-X pipeline image."/>
+        </div>
+        <!-- </br> -->
+        <!--/ Model Architecture. -->
+
+        <!-- Control Modes. -->
+        <!-- <h2 class="title is-3">Control Modes</h2>
+        <div class="content has-text-justified">
+          <p>
+            UH-1 can either generate high-level humanoid keypoints (text-to-keypoint)
+            for the goal-conditioned policy \( \pi \) to control the humanoid robot
+            in closed-loop, or generate robotic actions \( \mathcal{A}_{robot} \)
+            for direct open-loop control (text-to-action).
+          </p>
+        </div>
+        <div class="column is-full has-text-centered">
+          <img src="./static/images/control_mode.jpg"
+               style="width: 70%; height: auto;"
+               alt="Humanoid-X pipeline image."/>
+        </div>
+        </br> -->
+        <!--/ Control Modes. -->
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+<!--/ UH-1 Model. -->
+
+<!-- Citation. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <!-- <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre> -->
+  </div>
+</section>
+<!--/ Citation. -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Template was borrowed from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+          </p>
+          <!-- <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
